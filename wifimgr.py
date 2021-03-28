@@ -6,6 +6,7 @@ import time
 ap_ssid = "WifiManager"
 ap_password = "tayfunulu"
 ap_authmode = 3  # WPA2
+connect_to_open_wifis = False
 
 # If `link_to_next_webui` is set to `True` on the successfully connected page there is a link to the IP of the ESP in the newly connected WiFi.
 # This is useful if the ESP shows an other web interface after the WiFiManager, because the user can just click the link and doesn't have to search the new IP of the ESP.
@@ -62,8 +63,8 @@ def get_connection():
                     connected = do_connect(ssid, password)
                 else:
                     print("skipping unknown encrypted network")
-            else:  # open
-                connected = do_connect(ssid, None)
+            elif connect_to_open_wifis:
+                    connected = do_connect(ssid, None)
             if connected:
                 break
 
