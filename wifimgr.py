@@ -3,9 +3,9 @@ import socket
 import ure
 import time
 
-ap_ssid = "WifiManager"
-ap_password = "tayfunulu"
-ap_authmode = 3  # WPA2
+ap_ssid = "Agile Indicator Setup"
+ap_password = ""
+ap_authmode = 0  # WPA2
 connect_to_open_wifis = False
 
 # If `link_to_next_webui` is set to `True` on the successfully connected page there is a link to the IP of the ESP in the newly connected WiFi.
